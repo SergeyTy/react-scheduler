@@ -21,9 +21,9 @@ function App() {
       <body>
         
       </body>
-      <footer>
-        <p> Сделано <a className='App-Link' href=''>The Real Puffs</a></p>
-        <p> Ч</p>
+      <footer className="App-footer">
+        <p> Сделано <a className='App-Link' href="https://ya.ru" target="_blank">The Real Puffs</a></p>
+        <p> Чьи-то права точно защищены</p>
       </footer>
     </div>
   );
