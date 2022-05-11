@@ -18,6 +18,13 @@ function App() {
           Learn React
         </a>
       </header>
+      <body>
+        
+      </body>
+      <footer>
+        <p> Сделано <a className='App-Link' href=''>The Real Puffs</a></p>
+        <p> Ч</p>
+      </footer>
     </div>
   );
 }
