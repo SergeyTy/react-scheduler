@@ -1,25 +1,54 @@
-import logo from "./logo.svg";
 import "./App.css";
-import SmthTable from "./Table";
+import SmthTable from "./Component/Table";
 import moment from "moment";
 import "moment/locale/ru";
+import MyInput from "./Component/UI/MyInput";
+import { useRef } from "react";
 moment.locale("ru");
 
 function App() {
+    const bodyInputRef = useRef();
+
+    const show = (e) => {
+        console.log(bodyInputRef.current.value);
+    };
+
     return (
         <div className="App">
             <header className="App-header">
-                <p>СибГУТИ расписание</p>
-                <div className="App-today">
-                <p>
-                    Сегодня {moment().format("ll")},{" "}
-                    {moment().format("dddd")}
-                </p>
-                <p className="Week_2"> 10 учебная неделя</p>
-
+                <div className="Header-content">
+                    <div className="Info">
+                        <div className="Titel-row">
+                            <a
+                                className="App-Link"
+                                href="sibsutis.ru"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                СибГУТИ
+                            </a>
+                            <p> расписание</p>
+                        </div>
+                        <div className="App-today">
+                            <p>
+                                Сегодня{" "}
+                                {moment().format("ll")},{" "}
+                                {moment().format("dddd")}
+                            </p>
+                            <p>12 неделя</p>
+                        </div>
+                    </div>
+                    <div className="Search">
+                        <MyInput
+                            ref={bodyInputRef}
+                            type="text"
+                            placeholder="Группа или преподаватель"
+                            onChange={show}
+                        />
+                    </div>
                 </div>
             </header>
-            <body className="App-body">
+            <body>
                 <SmthTable />
             </body>
             <footer className="App-footer">

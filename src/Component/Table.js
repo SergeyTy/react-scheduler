@@ -15,9 +15,9 @@ function SmthTable(data){
 	</Thead>
 	<Tbody>
 		<Tr>
-			<Td>{data.time} 8:00</Td>
-			<Td>{data.sub} Game-design</Td>
-			<Td>{data.au} kabinet</Td>
+			<Td>{data[0]} 8:00</Td>
+			<Td>{data[1]} Game-design</Td>
+			<Td>{data[2]} kabinet</Td>
 			<Td>Prepod</Td>
 		</Tr>
         <Tr>
