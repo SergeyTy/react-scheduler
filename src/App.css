@@ -87,9 +87,15 @@
 
 .Week_1 {
     background-color: #377d22;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 2px 5px;
 }
 .Week_2 {
     background-color: #e96136;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 2px 5px;
 }
 
 .App-footer {
