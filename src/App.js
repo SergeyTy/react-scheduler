@@ -3,24 +3,34 @@ import SmthTable from "./Component/Table";
 import moment from "moment";
 import "moment/locale/ru";
 import MyInput from "./Component/UI/MyInput";
-import { useRef, useState } from "react";
-moment.locale("ru");
+import { useMemo, useRef, useState } from "react";
+import ItemData from "./data/ItemData";
+import ErrorBoundary from "./Component/ErrorBoundary";
 
-const data = ["0","01","02","03"]
+moment.locale("ru");
 
 function App() {
     const bodyInputRef = useRef();
-    
-    const [CurrentWeek, setCurrentWeek] = useState(moment().week());
-    
 
+    const [CurrentWeek, setCurrentWeek] = useState(
+        moment().week()
+    );
 
-    
+    const [SearchQuery, setSearchQuery] = useState();
+
+    const SearchedScheduler = useMemo(()=>{
+        return ItemData.filter(item => item.item.toLowerCase().includes(SearchQuery))
+    },[SearchQuery, ItemData])
+
+    const listItems = ItemData.map(i => (
+        <p key={i.id}> {i.item} </p>
+    ));
+
     const [Title, setTitle] = useState("0");
 
     const show = (e) => {
-        console.log(bodyInputRef.current.value);
         setTitle(bodyInputRef.current.value);
+
     };
 
     return (
@@ -45,28 +55,35 @@ function App() {
                                 {moment().format("ll")},{" "}
                                 {moment().format("dddd")}
                             </p>
-                            {
-                            CurrentWeek % 2 !==0 
-                            ?
-                            <p className="Week_1">{CurrentWeek} учебная неделя</p>
-                            :
-                            <p className="Week_2">{CurrentWeek} учебная неделя</p>
-                        }
+                            {CurrentWeek % 2 !== 0 ? (
+                                <p className="Week_1">
+                                    {CurrentWeek} учебная
+                                    неделя
+                                </p>
+                            ) : (
+                                <p className="Week_2">
+                                    {CurrentWeek} учебная
+                                    неделя
+                                </p>
+                            )}
                         </div>
                     </div>
                     <div className="Search">
                         <MyInput
                             ref={bodyInputRef}
+                            value= {SearchQuery}
                             type="text"
                             placeholder="Группа или преподаватель"
-                            onChange={show}
-                        />
+                            onChange={e=> setSearchQuery(e.target.value)}
+                            />
+                            {SearchedScheduler.map(item => (
+                            <p key={item.id}> {item.item} </p>))}
                     </div>
                 </div>
             </header>
             <body className="App-body">
                 <p>{Title}</p>
-                <SmthTable {...data} />
+                <SmthTable />
             </body>
             <footer className="App-footer">
                 <p>
