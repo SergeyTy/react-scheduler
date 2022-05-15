@@ -52,7 +52,7 @@ function App() {
                         <div className="Titel-row">
                             <a
                                 className="App-Link"
-                                href="sibsutis.ru"
+                                href="https://sibsutis.ru"
                                 target="_blank"
                                 rel="noreferrer noopener"
                             >
@@ -119,7 +119,7 @@ function App() {
                     Сделано{" "}
                     <a
                         className="App-Link"
-                        href="https://ya.ru"
+                        href="https://https://github.com/SergeyTy/react-scheduler"
                         target="_blank"
                         rel="noreferrer noopener"
                     >
