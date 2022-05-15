@@ -119,7 +119,7 @@ function App() {
                     Сделано{" "}
                     <a
                         className="App-Link"
-                        href="https://https://github.com/SergeyTy/react-scheduler"
+                        href="https://github.com/SergeyTy/react-scheduler"
                         target="_blank"
                         rel="noreferrer noopener"
                     >
