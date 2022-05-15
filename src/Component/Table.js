@@ -1,46 +1,46 @@
-import React from 'react'
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
-import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+import React from "react";
+import ErrorBoundary from "./ErrorBoundary";
+import {
+    Table,
+    Thead,
+    Tbody,
+    Tr,
+    Th,
+    Td,
+} from "./Tabel/components/index";
+import "./Tabel/SuperResponsiveTableStyle.css";
+import { ri01, ri02 } from "../data/ri-0";
 
-function SmthTable(data){
-    return(
-    <Table>
-	<Thead>
-		<Tr>
-			<Th>Время</Th>
-			<Th>Предмет</Th>
-			<Th>Кабинет</Th>
-			<Th>Преподователь</Th>
-		</Tr>
-	</Thead>
-	<Tbody>
-		<Tr>
-			<Td>{data[0]} 8:00</Td>
-			<Td>{data[1]} Game-design</Td>
-			<Td>{data[2]} kabinet</Td>
-			<Td>Prepod</Td>
-		</Tr>
-        <Tr>
-			<Td>{data.time} 8:00</Td>
-			<Td>{data.sub} Game-design</Td>
-			<Td>{data.au} kabinet</Td>
-			<Td>Prepod</Td>
-		</Tr>
-        <Tr>
-			<Td>{data.time} 8:00</Td>
-			<Td>{data.sub} Game-design</Td>
-			<Td>{data.au} kabinet</Td>
-			<Td>Prepod</Td>
-		</Tr>
-        <Tr>
-			<Td>{data.time} 8:00</Td>
-			<Td>{data.sub} Game-design</Td>
-			<Td>{data.au} kabinet</Td>
-			<Td>Prepod</Td>
-		</Tr>
-		
-	</Tbody>
-</Table>)
-};
+function SmthTable(props) {
+    console.log(props.data.scheduler_1.mon);
+    return (
+        <Table>
+            <Thead>
+                <Tr>
+                    <Th>Время</Th>
+                    <Th>Предмет</Th>
+                    <Th>Тип</Th>
+                    <Th>Кабинет</Th>
+                    <Th>Преподователь</Th>
+                </Tr>
+            </Thead>
+			{props.data.scheduler_1.map((day) => (
+				<Tbody>
+					{day.map((i) => (
+					<Tr>
+						<Td>{i.time}</Td>
+						<Td>{i.sub}</Td>
+						<Td>{i.type}</Td>
+						<Td>{i.place}</Td>
+						<Td>{i.prepod}</Td>
+					</Tr>
+					))}
+				<hr></hr>
+				</Tbody>
+				))}
+
+        </Table>
+    );
+}
 
 export default SmthTable;

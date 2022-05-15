@@ -5,7 +5,9 @@ import "moment/locale/ru";
 import MyInput from "./Component/UI/MyInput";
 import { useMemo, useRef, useState } from "react";
 import ItemData from "./data/ItemData";
+import {ri01, ri02} from "./data/ri-0";
 import ErrorBoundary from "./Component/ErrorBoundary";
+import MyCombox from "./Component/MyCombox";
 
 moment.locale("ru");
 
@@ -16,21 +18,30 @@ function App() {
         moment().week()
     );
 
+    const [CurrentSch, setCurrentSch] = useState();
+
     const [SearchQuery, setSearchQuery] = useState();
 
-    const SearchedScheduler = useMemo(()=>{
-        return ItemData.filter(item => item.item.toLowerCase().includes(SearchQuery))
-    },[SearchQuery, ItemData])
+    const [FilteredItem, setFilterdItem] = useState([]);
 
-    const listItems = ItemData.map(i => (
-        <p key={i.id}> {i.item} </p>
+    const SearchedScheduler = useMemo(() => {
+        if (SearchQuery !== null) {
+            return ItemData.filter((item) =>
+                item.item
+                    .toLowerCase()
+                    .includes(SearchQuery)
+            );
+        } else return null;
+    }, [SearchQuery, ItemData]);
+
+    const listItems = ItemData.map((i) => (
+        <p key={i.key}> {i.item} </p>
     ));
 
     const [Title, setTitle] = useState("0");
 
     const show = (e) => {
         setTitle(bodyInputRef.current.value);
-
     };
 
     return (
@@ -71,19 +82,36 @@ function App() {
                     <div className="Search">
                         <MyInput
                             ref={bodyInputRef}
-                            value= {SearchQuery}
+                            value={SearchQuery}
                             type="text"
                             placeholder="Группа или преподаватель"
-                            onChange={e=> setSearchQuery(e.target.value)}
-                            />
-                            {SearchedScheduler.map(item => (
-                            <p key={item.id}> {item.item} </p>))}
+                            onChange={(e) =>
+                                setSearchQuery(
+                                    e.target.value
+                                )
+                            }
+                        />
+                        {SearchQuery !== "" ? (
+                            SearchedScheduler.map(
+                                (item) => (
+                                    <li key={item.id}>
+                                        {" "}
+                                        {item.item}{" "}
+                                    </li>
+                                )
+                            )
+                        ) : (
+                            <hr></hr>
+                        )}
                     </div>
                 </div>
             </header>
             <body className="App-body">
-                <p>{Title}</p>
-                <SmthTable />
+                {SearchedScheduler.length> 0 ? (
+                    <SmthTable data={ri02}/>
+                ) : (
+                    <hr></hr>
+                )}
             </body>
             <footer className="App-footer">
                 <p>
