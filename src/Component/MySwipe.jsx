@@ -1,7 +1,9 @@
 import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import "./MySwipe.css"
-
+import moment from "moment";
+import "moment/locale/ru";
+import { locale } from 'moment';
 
 const styles = {
     slide: {
@@ -22,10 +24,11 @@ const styles = {
 };
 
 const MySwipe = (props) => (
-    <SwipeableViews enableMouseEvents>
+    <SwipeableViews enableMouseEvents index={moment().day()-1}>
         {props.data.scheduler_1.map((day) => (
             <div style={Object.assign({}, styles.slide)}>
-                {day.map((i) => (
+                <div className='Header'>{day.day}</div>
+                {day.sch.map((i) => (
                     <div className='sub-card'>
                         <div className='sub-card-1-row'>
                             <p className='sub-card-item sub-card-time'>{i.time}</p>
@@ -48,14 +51,6 @@ const MySwipe = (props) => (
                 ))}
             </div>
         ))}
-        <div style={Object.assign({}, styles.slide, styles.slide1)}>
-        </div>
-        <div style={Object.assign({}, styles.slide, styles.slide2)}>
-
-        </div>
-        <div style={Object.assign({}, styles.slide, styles.slide3)}>
-
-        </div>
     </SwipeableViews>
 );
 

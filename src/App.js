@@ -78,9 +78,7 @@ function App() {
                 </div>
                 <div></div>
                 <div>Weather by Pasha</div>
-                <div className="shadow">
                     <MySwipe data={ri02} />
-                </div>
             </Plock>
             {/* <div className="Header-content">
                     <Search

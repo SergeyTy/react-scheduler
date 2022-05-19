@@ -9,6 +9,11 @@
     font-size: 0.9em*12px;
 }
 
+.Header{
+    font-size: 34px;
+    font-weight: bold;
+}
+
 .sub-card-time{
     background-color: aliceblue !important;
     color:black !important;
