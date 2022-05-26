@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-scheduler/static/css/main.39ac5c9f.css",
-    "main.js": "/react-scheduler/static/js/main.c131a346.js",
+    "main.css": "/react-scheduler/static/css/main.625f8f53.css",
+    "main.js": "/react-scheduler/static/js/main.3bd4b528.js",
     "static/js/787.ed0c85cb.chunk.js": "/react-scheduler/static/js/787.ed0c85cb.chunk.js",
     "index.html": "/react-scheduler/index.html",
-    "main.39ac5c9f.css.map": "/react-scheduler/static/css/main.39ac5c9f.css.map",
-    "main.c131a346.js.map": "/react-scheduler/static/js/main.c131a346.js.map",
+    "main.625f8f53.css.map": "/react-scheduler/static/css/main.625f8f53.css.map",
+    "main.3bd4b528.js.map": "/react-scheduler/static/js/main.3bd4b528.js.map",
     "787.ed0c85cb.chunk.js.map": "/react-scheduler/static/js/787.ed0c85cb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39ac5c9f.css",
-    "static/js/main.c131a346.js"
+    "static/css/main.625f8f53.css",
+    "static/js/main.3bd4b528.js"
   ]
 }
