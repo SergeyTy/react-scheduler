@@ -1,52 +1,56 @@
 .sub-card{
-    background-color: antiquewhite;
     padding: 0.5em;
-    margin: 5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    border-radius: 30px;
-    font-size: .5em*8px;
+    border-top: 1px solid #000000;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .Header{
-    font-size: 34px;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: left;
+    margin: 10px 0 10px 10px;
 }
 
 .sub-card-time{
-    background-color: aliceblue !important;
     color:black !important;
+    border-right: 1px solid #000000;
+    padding: 0.25em 1em 0.25em 0em !important;
 }
 
 .sub-card-1-row{
     display: flex;
-    flex-direction: row;
-    margin: auto;
-    padding: 0.2em;
+    align-content: left;
 }
 
 
 .t-l{
-    background-color: rgb(0, 136, 255) !important;
+    background-color: rgb(72, 116, 229) !important;
     color:white !important;
 }
 
 .t-lr{
-    background-color: rgb(118, 233, 52) !important;
+    background-color: rgb(227, 110, 79) !important;
     color:white !important;
 }
 
 .t-p{
-    background-color: rgb(220, 117, 15) !important;
+    background-color: rgb(232, 166, 103) !important;
     color:white !important;
 }
 
 .sub-card-item{
-    border-radius: 30px;
-    background-color: rgb(255, 255, 255);
     color:black;
-    padding: 0.5em;
-    margin: 0.2em;
-    min-width: 4em;
+    margin: 0 0 0 0.25em;
+    padding: 0.25em;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 }

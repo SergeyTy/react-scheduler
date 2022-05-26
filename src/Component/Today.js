@@ -3,18 +3,18 @@ import moment from "moment";
 export function Today(props) {
     return (
         <div className="App-today">
-            <p>
+            <h3>
                 Сегодня {moment().format("ll")},{" "}
                 {moment().format("dddd")}
-            </p>
+            </h3>
             {props.CurrentWeek % 2 !== 0 ? (
-                <p className="Week_1">
+                <h3 className="Week_1">
                     {props.CurrentWeek} учебная неделя
-                </p>
+                </h3>
             ) : (
-                <p className="Week_2">
+                <h3 className="Week_2">
                     {props.CurrentWeek} учебная неделя
-                </p>
+                </h3>
             )}
         </div>
     );

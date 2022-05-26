@@ -7,10 +7,10 @@ import { locale } from 'moment';
 
 const styles = {
     slide: {
-        "min-height": "90vh",
-        "margin": 10,
-        "border-radius": "30px",
-        "box-shadow": "5px 5px 10px #00000058",
+        "margin": 0,
+        "min-width": "fill-available",
+        "border-bottom": "2px solid #000000",
+        "border-top": "2px solid #000000",
         },
     slide1: {
         background: '#FEA900',
@@ -33,7 +33,7 @@ const MySwipe = (props) => (
                     <div className='sub-card'>
                         <div className='sub-card-1-row'>
                             <p className='sub-card-item sub-card-time'>{i.time}</p>
-                            <p className='sub-card-item' style={{"font-weight": "bold"}}>{i.sub}</p>
+                            <p className='sub-card-item' style={{"font-weight": "bold", "margin": "0 0 0 0.5em"}}>{i.sub}</p>
                             {i.type == 'Лекция' && 
                                 <p className='sub-card-item t-l'>{i.type}</p>
                             }
@@ -43,8 +43,6 @@ const MySwipe = (props) => (
                             {i.type == 'Лабараторная работа' && 
                                 <p className='sub-card-item t-lr'>{i.type}</p>
                             }
-                        </div>
-                        <div className='sub-card-1-row'>
                             <p className='sub-card-item'>{i.place}</p>
                             <p className='sub-card-item'>{i.prepod}</p>
                         </div>

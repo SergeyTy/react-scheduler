@@ -106,16 +106,15 @@ function App() {
                         >
                             СибГУТИ
                         </a>
-                        <p> расписание</p>
+                        <h2> расписание</h2>
                     </div>
                     <Today CurrentWeek={CurrentWeek} />
                 </div>
-                <div></div>
-                <div>Anim by Gleb</div>
-                <div style={{"display":"flex", "flexDirection": "row", "justifyContent": "space-around"}}>
-                    <label>Неделя </label>
-                    <button>1</button>
-                    <button>2</button>
+
+                <div className="WeekButtons">
+                    <h4>Неделя:</h4>
+                    <button>Нечётная</button>
+                    <button>Чётная</button>
                 </div>
 
                 <div> {
@@ -123,10 +122,6 @@ function App() {
                     <Weather weatherData={data}/>): (
                     <div></div>)
                 }</div>
-
-               
-
-                {/*<div>Weather by Pasha</div>*/}
 
                 <MySwipe data={ri02.data[CurrentWeek % 2]} style={{width: "100% !imortant"}}/>
             </Plock>
@@ -149,7 +144,7 @@ function App() {
             </body> */}
             <footer className="App-footer">
                 <div className="footer-content">
-                    <p>Сделано {" "} 
+                    <h5>Сделано {" "} 
                     <a
                         className="App-Link"
                         href="https://github.com/SergeyTy/react-scheduler"
@@ -157,8 +152,8 @@ function App() {
                         rel="noreferrer noopener"
                     >
                         The Real Puffs
-                    </a></p>
-                    <p> Чьи-то права точно защищены</p>
+                    </a></h5>
+                    <h5> Чьи-то права точно защищены</h5>
                 </div>
             </footer>
         </div>
