@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  overflow: hidden;
-  
+  padding: 10px;  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

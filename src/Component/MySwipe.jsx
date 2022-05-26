@@ -11,7 +11,7 @@ const styles = {
         "margin": 10,
         "border-radius": "30px",
         "box-shadow": "5px 5px 10px #00000058",
-    },
+        },
     slide1: {
         background: '#FEA900',
     },
@@ -24,8 +24,9 @@ const styles = {
 };
 
 const MySwipe = (props) => (
+    
     <SwipeableViews enableMouseEvents index={moment().day()-1}>
-        {props.data.scheduler_1.map((day) => (
+        {props.data.scheduler.map((day) => (
             <div style={Object.assign({}, styles.slide)}>
                 <div className='Header'>{day.day}</div>
                 {day.sch.map((i) => (

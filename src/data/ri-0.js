@@ -38,7 +38,11 @@ const t_slot = new Map([
 
 const ri02 = {
     key: "02",
-    scheduler_1: [
+    data:
+    [
+    {
+        id: "1",
+        scheduler: [
         {
             id: 0,
             day: "Понедельник",
@@ -221,7 +225,197 @@ const ri02 = {
                 },
             ],
         },
+        ],
+    },
+    {
+        id: "2",
+        scheduler: [
+        {
+            id: 0,
+            day: "Понедельник",
+            sch: [
+                {
+                    id: 1,
+                    time: t_slot.get(2),
+                    sub: sub.get("ptg"),
+                    type: t.get("l"),
+                    place: "210 (К.1)",
+                    prepod: pre.get("h_anim"),
+                },
+                {
+                    id: 2,
+                    time: t_slot.get(3),
+                    sub: sub.get("tc"),
+                    type: t.get("lr"),
+                    place: "309	(К.1)",
+                    prepod: pre.get("ski"),
+                },
+                {
+                    id: 3,
+                    time: t_slot.get(4),
+                    sub: sub.get("ip"),
+                    type: t.get("lr"),
+                    place: "300	(К.1)",
+                    prepod: pre.get("oia"),
+                },
+            ],
+        },
+        {
+            id: 1,
+            day: "Вторник",
+            sch: [
+                {
+                    id: 1,
+                    time: t_slot.get(1),
+                    sub: sub.get("ip"),
+                    type: t.get("lr"),
+                    place: "300	(К.1)",
+                    prepod: pre.get("oia"),
+                },
+                {
+                    id: 2,
+                    time: t_slot.get(2),
+                    sub: sub.get("it"),
+                    type: t.get("lr"),
+                    place: "309	(К.1)",
+                    prepod: pre.get("3d1"),
+                },
+                {
+                    id: 3,
+                    time: t_slot.get(3),
+                    sub: sub.get("sp"),
+                    type: t.get("l"),
+                    place: "202 (К.1)",
+                    prepod: pre.get("cho"),
+                },
+                {
+                    id: 4,
+                    time: t_slot.get(4),
+                    sub: sub.get("bl"),
+                    type: t.get("lr"),
+                    place: "471 (К.5)",
+                    prepod: pre.get("sh_1"),
+                },
+            ],
+        },
+        {
+            id: 2,
+            day: "Среда",
+            sch: [
+                {
+                    id: 1,
+                    time: t_slot.get(1),
+                    sub: sub.get("ip"),
+                    type: t.get("lr"),
+                    place: "300	(К.1)",
+                    prepod: pre.get("oia"),
+                },
+                {
+                    id: 2,
+                    time: t_slot.get(2),
+                    sub: sub.get("it"),
+                    type: t.get("lr"),
+                    place: "309	(К.1)",
+                    prepod: pre.get("3d1"),
+                },
+                {
+                    id: 3,
+                    time: t_slot.get(3),
+                    sub: sub.get("sp"),
+                    type: t.get("l"),
+                    place: "202 (К.1)",
+                    prepod: pre.get("cho"),
+                },
+                {
+                    id: 4,
+                    time: t_slot.get(4),
+                    sub: sub.get("bl"),
+                    type: t.get("lr"),
+                    place: "471 (К.5)",
+                    prepod: pre.get("sh_1"),
+                },
+            ],
+        },
+        {
+            id: 3,
+            day: "Четверг_",
+            sch: [
+                {
+                    id: 1,
+                    time: t_slot.get(1),
+                    sub: sub.get("ip"),
+                    type: t.get("lr"),
+                    place: "300	(К.1)",
+                    prepod: pre.get("oia"),
+                },
+                {
+                    id: 2,
+                    time: t_slot.get(2),
+                    sub: sub.get("it"),
+                    type: t.get("lr"),
+                    place: "309	(К.1)",
+                    prepod: pre.get("3d1"),
+                },
+                {
+                    id: 3,
+                    time: t_slot.get(3),
+                    sub: sub.get("sp"),
+                    type: t.get("l"),
+                    place: "202 (К.1)",
+                    prepod: pre.get("cho"),
+                },
+                {
+                    id: 4,
+                    time: t_slot.get(4),
+                    sub: sub.get("bl"),
+                    type: t.get("lr"),
+                    place: "471 (К.5)",
+                    prepod: pre.get("sh_1"),
+                },
+            ],
+        },
+        {
+            id: 4,
+            day: "Пятница",
+            sch: [
+                {
+                    id: 1,
+                    time: t_slot.get(1),
+                    sub: sub.get("ip"),
+                    type: t.get("lr"),
+                    place: "300	(К.1)",
+                    prepod: pre.get("oia"),
+                },
+                {
+                    id: 2,
+                    time: t_slot.get(2),
+                    sub: sub.get("it"),
+                    type: t.get("lr"),
+                    place: "309	(К.1)",
+                    prepod: pre.get("3d1"),
+                },
+                {
+                    id: 3,
+                    time: t_slot.get(3),
+                    sub: sub.get("sp"),
+                    type: t.get("l"),
+                    place: "202 (К.1)",
+                    prepod: pre.get("cho"),
+                },
+                {
+                    id: 4,
+                    time: t_slot.get(4),
+                    sub: sub.get("bl"),
+                    type: t.get("lr"),
+                    place: "471 (К.5)",
+                    prepod: pre.get("sh_1"),
+                },
+            ],
+        },
+        ],
+    },
     ],
+    
 };
 
 const ri01 = {

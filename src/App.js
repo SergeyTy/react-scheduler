@@ -60,6 +60,7 @@ function App() {
         <div className="App">
             <Plock
                 nColumns={breakpoints}
+
                 className="App-body"
             >
                 <div className="Info">
@@ -77,8 +78,14 @@ function App() {
                     <Today CurrentWeek={CurrentWeek} />
                 </div>
                 <div></div>
+                <div>Anim by Gleb</div>
+                <div style={{"display":"flex", "flexDirection": "row", "justifyContent": "space-around"}}>
+                    <label>Неделя </label>
+                    <button>1</button>
+                    <button>2</button>
+                </div>
                 <div>Weather by Pasha</div>
-                    <MySwipe data={ri02} />
+                <MySwipe data={ri02.data[CurrentWeek % 2]} style={{width: "100% !imortant"}}/>
             </Plock>
             {/* <div className="Header-content">
                     <Search
