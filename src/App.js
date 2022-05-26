@@ -79,7 +79,7 @@ function App() {
             console.log("url = ",process.env.REACT_APP_API_URL)
             
             console.log("key = ",process.env.REACT_APP_API_KEY)
-			await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=59aa82de2145172e26222d8b6415223c`)
+			await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=59aa82de2145172e26222d8b6415223c`)
 			.then(res => res.json())
 			.then(result => {
 				setData(result)
