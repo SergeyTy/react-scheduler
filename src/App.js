@@ -114,7 +114,7 @@ function App() {
                 }</div>
                 
                 <MySwipe data={ri02.data[CurrentWeek % 2]} style={{width: "100% !imortant"}}/>
-                <h5 style={{"text-align": "left"}}>by SergeyTy</h5>
+                <h5 style={{"text-align": "left"}}>Table by SergeyTy</h5>
             </Plock>
             {/* <div className="Header-content">
                     <Search
@@ -145,6 +145,7 @@ function App() {
                         The Real Puffs
                     </a></h5>
                     <h5>Чьи-то права точно защищены</h5>
+                    <h5>Visual and Themes by Gleb</h5>
                 </div>
             </footer>
         </div>

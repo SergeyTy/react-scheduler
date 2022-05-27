@@ -13,7 +13,7 @@ const Weather = ({weatherData}) => (
         <h3>Влажность: {weatherData.main.humidity} %</h3> 
         <h3>Ощущается как: {Math.round(weatherData.main.feels_like - 273)} &deg;C</h3> 
         <h3>Город: {weatherData.name}</h3>
-        <h5 style={{"text-align": "left", "margin": "1em 0 0 0"}}>by Pasha</h5>
+        <h5 style={{"text-align": "left", "margin": "1em 0 0 0"}}>Weather by Pasha</h5>
     </div>
 )
 

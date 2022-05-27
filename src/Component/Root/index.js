@@ -8,6 +8,7 @@ const Root = () => (
   <ThemeContext.Consumer>
     {({ theme, setTheme }) => (
 		<div>
+		<App/>
 		<Toggle
 			onChange={() => {
 				if (theme === themes.light) setTheme(themes.dark)
@@ -15,7 +16,6 @@ const Root = () => (
 			}}
 			value={theme === themes.dark}
 		/>
-		<App/>
 		</div>
     )}
   </ThemeContext.Consumer>

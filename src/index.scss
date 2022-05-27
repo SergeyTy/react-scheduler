@@ -3,6 +3,12 @@
   --color: #181818;
   --border: 1px solid #181818;
   --border_table: 2px solid #181818;
+
+  --background-tl: #4A75E2;
+  --background-lr: #E16D53;
+  --background-p: #E7A56B;
+  --background-w1: #377d22;
+  --background-w2: #e96136;
 }
 
 :root[data-theme="dark"] {
@@ -10,6 +16,12 @@
   --color: #ffffff;
   --border: 1px solid #ffffff;
   --border_table: 2px solid #ffffff;
+
+  --background-tl: #86A3EB;
+  --background-lr: #e0775f;
+  --background-p: #E3B58D;
+  --background-w1: #528144;
+  --background-w2: #EE825F;
 }
 
 body {
@@ -38,13 +50,21 @@ body {
 }
 
 .t-l{
-  background-color: rgb(72, 116, 229);
+  background-color: var(--background-tl);
 }
 
 .t-lr{
-  background-color: rgb(227, 110, 79);
+  background-color: var(--background-lr);
 }
 
 .t-p{
-  background-color: rgb(232, 166, 103);
+  background-color: var(--background-p);
+}
+
+.Week_1{
+  background-color: var(--background-w1);
+}
+
+.Week_2{
+  background-color: var(--background-w2);
 }
