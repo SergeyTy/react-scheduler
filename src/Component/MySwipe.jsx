@@ -5,28 +5,12 @@ import moment from "moment";
 import "moment/locale/ru";
 import { locale } from 'moment';
 
-const styles = {
-    slide: {
-        "margin": 0,
-        "min-width": "fill-available",
-        "border-bottom": "2px solid #000000",
-        "border-top": "2px solid #000000",
-        },
-    slide1: {
-        background: '#FEA900',
-    },
-    slide2: {
-        background: '#B3DC4A',
-    },
-    slide3: {
-        background: '#6AC0FF',
-    },
-};
+
 
 const MySwipe = (props) => (
     <SwipeableViews enableMouseEvents index={moment().day()-1}>
         {props.data.scheduler.map((day) => (
-            <div style={Object.assign({}, styles.slide)}>
+            <div className='TableStyle'>
                 <div className='Header'>{day.day}</div>
                 {day.sch.map((i) => (
                     <div className='sub-card'>

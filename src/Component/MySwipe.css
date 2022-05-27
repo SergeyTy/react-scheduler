@@ -19,7 +19,6 @@
 }
 
 .sub-card-time{
-    color:black !important;
     border-right: 1px solid #000000;
     padding: 0.25em 1em 0.25em 0em !important;
 }
@@ -31,22 +30,18 @@
 
 
 .t-l{
-    background-color: rgb(72, 116, 229) !important;
     color:white !important;
 }
 
 .t-lr{
-    background-color: rgb(227, 110, 79) !important;
     color:white !important;
 }
 
 .t-p{
-    background-color: rgb(232, 166, 103) !important;
     color:white !important;
 }
 
 .sub-card-item{
-    color:black;
     margin: 0 0 0 0.25em;
     padding: 0.25em;
 

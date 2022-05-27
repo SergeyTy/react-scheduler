@@ -3,9 +3,10 @@
 .App {
     text-align: center;
     font-family: "Open Sans", sans-serif;
-    align-items: left;
+    align-items: center;
+    align-content: center;
     max-width: 50%;
-    margin: 0 0 0 25%;
+    margin: 0 25%;
 }
 
 .App-logo {
@@ -39,7 +40,6 @@
     display: flex;
     flex-direction: column;
     align-items: left;
-    background-color: #ffffff;
     margin: 10px;
     padding: 0px 0px 0px 0px;
        
@@ -68,14 +68,14 @@
 
 .Week_1 {
     background-color: #377d22;
-    color: #ffffff;
+    color: #ffffff !important;
     padding: 2px 4px;
     gap: 10px;
     margin: 3px 0px 0px 10px;
 }
 .Week_2 {
     background-color: #e96136;
-    color: #ffffff;
+    color: #ffffff !important;
     padding: 2px 4px;
     gap: 10px;
     margin: 3px 0px 0px 10px;
@@ -83,14 +83,14 @@
 
 .App-footer {
     display: flex;
-    min-height: 8vh;
     align-content: center;
+    margin: 0 25%;
 }
 
 .footer-content{
     align-content: center;
-    width: 80%;
-    margin: auto;
+    min-width: 16em;
+    margin: 0 25%;
 }
 
 .Weather{
@@ -104,18 +104,6 @@
     display: flex;
     flex-direction: row;
     margin: 0 0 0 10px;
-}
-
-button{
-    background-color: #ffffff;
-    border: 0px;
-    border-bottom: 1px solid #429cf8;
-    margin: 2px 0 0 10px;
-    padding: 0 0 0 0;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
 }
 
 a {

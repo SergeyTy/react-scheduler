@@ -1,0 +1,50 @@
+:root[data-theme="light"] {
+  --background-color: #ffffff;
+  --color: #181818;
+  --border: 1px solid #181818;
+  --border_table: 2px solid #181818;
+}
+
+:root[data-theme="dark"] {
+  --background-color: #181818;
+  --color: #ffffff;
+  --border: 1px solid #ffffff;
+  --border_table: 2px solid #ffffff;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--color);
+  
+}
+
+.sub-card{
+  border-top: var(--border);
+}
+
+.sub-card-item{
+  color: var(--color)
+}
+
+.sub-card-time{
+  border-right: var(--border);
+}
+
+.TableStyle{
+  margin: 0;
+  min-width: fill-available;
+  border-bottom: var(--border_table);
+  border-top: var(--border_table);
+}
+
+.t-l{
+  background-color: rgb(72, 116, 229);
+}
+
+.t-lr{
+  background-color: rgb(227, 110, 79);
+}
+
+.t-p{
+  background-color: rgb(232, 166, 103);
+}

@@ -75,7 +75,7 @@ function App() {
             console.log("url = ",process.env.REACT_APP_API_URL)
             
             console.log("key = ",process.env.REACT_APP_API_KEY)
-			await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=54.9912576&lon=82.968576&APPID=59aa82de2145172e26222d8b6415223c`)
+			await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=54.9912576&lon=82.968576&lang=ru&APPID=59aa82de2145172e26222d8b6415223c`)
 			.then(res => res.json())
 			.then(result => {
 				setData(result)
@@ -112,6 +112,7 @@ function App() {
                     <Weather weatherData={data}/>): (
                     <div>Здесь могла быть ваша погода</div>)
                 }</div>
+                
                 <MySwipe data={ri02.data[CurrentWeek % 2]} style={{width: "100% !imortant"}}/>
                 <h5 style={{"text-align": "left"}}>by SergeyTy</h5>
             </Plock>
@@ -143,7 +144,7 @@ function App() {
                     >
                         The Real Puffs
                     </a></h5>
-                    <h5> Чьи-то права точно защищены</h5>
+                    <h5>Чьи-то права точно защищены</h5>
                 </div>
             </footer>
         </div>
