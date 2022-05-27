@@ -48,9 +48,9 @@ function App() {
 
     const breakpoints = [
         { size: 640, columns: 1 },
-        { size: 768, columns: 2 },
-        { size: 1024, columns: 2 },
-        { size: 1280, columns: 2 },
+        { size: 768, columns: 1 },
+        { size: 1024, columns: 1 },
+        { size: 1280, columns: 1 },
     ];
 
     const [lat, setLat] = useState([]);
@@ -113,6 +113,7 @@ function App() {
                     <div>Здесь могла быть ваша погода</div>)
                 }</div>
                 <MySwipe data={ri02.data[CurrentWeek % 2]} style={{width: "100% !imortant"}}/>
+                <h5 style={{"text-align": "left"}}>by SergeyTy</h5>
             </Plock>
             {/* <div className="Header-content">
                     <Search

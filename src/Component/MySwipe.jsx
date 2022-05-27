@@ -24,7 +24,6 @@ const styles = {
 };
 
 const MySwipe = (props) => (
-    
     <SwipeableViews enableMouseEvents index={moment().day()-1}>
         {props.data.scheduler.map((day) => (
             <div style={Object.assign({}, styles.slide)}>
