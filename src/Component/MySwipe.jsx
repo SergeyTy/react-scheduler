@@ -40,7 +40,7 @@ const MySwipe = (props) => (
                             {i.type == 'Практика' && 
                                 <p className='sub-card-item t-p'>{i.type}</p>
                             }
-                            {i.type == 'Лабараторная работа' && 
+                            {i.type == 'Лабораторная работа' && 
                                 <p className='sub-card-item t-lr'>{i.type}</p>
                             }
                             <p className='sub-card-item'>{i.place}</p>

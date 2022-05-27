@@ -102,16 +102,15 @@ function App() {
                         >
                             СибГУТИ
                         </a>
-                        <h2> расписание</h2>
+                        <h2>расписание</h2>
                     </div>
                     <Today CurrentWeek={CurrentWeek} />
                 </div>
 
-                <div></div>
                 <div> {
                     (typeof data.main != 'undefined') ? (
                     <Weather weatherData={data}/>): (
-                    <div>Здесь могла быть погда</div>)
+                    <div>Здесь могла быть ваша погода</div>)
                 }</div>
                 <MySwipe data={ri02.data[CurrentWeek % 2]} style={{width: "100% !imortant"}}/>
             </Plock>
